@@ -3,15 +3,6 @@ import csv
 
 file_path = os.path.join("", "Resources", "election_data.csv")
 
-monthPL = []
-monthPL_sorted = []
-netPL = 0
-nextIndex = 1
-monthPL_length = 0
-monthPL_diff = 0
-monthPL_diff_total = 0
-monthPL_diff_avg = 0
-
 electionData = []
 electionData_length = 0
 
@@ -34,5 +25,8 @@ print(electionData_length)
 for index in range(electionData_length):
     if electionData[index]["Candidate"] == "Khan":
     	voteCount_Khan += 1
+    elif electionData[index]["Candidate"] == "Correy":
+    	voteCount_Correy += 1
+
 
 print(voteCount_Khan)
