@@ -23,7 +23,7 @@ electionData_length = len(electionData)
 print(electionData_length)
 
 
-for idx, name in enumerate(candidates):
+for name in candidates:
     for index in range(electionData_length):
         if electionData[index]["Candidate"] == name:
             voteTotals += 1
