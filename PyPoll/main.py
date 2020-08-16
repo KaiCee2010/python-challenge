@@ -16,13 +16,11 @@ with open(file_path, "r") as csvfile:
 #Add data from reader into a dictionary variable
     for row in csvreader:
         electionData.append(row)
-
+        if row["Candidate"] not in candidates:
+            candidates.append(row["Candidate"])
+	
 electionData_length = len(electionData)
 print(electionData_length)
-
-for index in range(electionData_length):
-    if electionData[index]["Candidate"] not in candidates:
-        candidates.append(electionData[index]["Candidate"])
 
 voteTotals = [0]  *  len(candidates)
 voteResults = [0] * len(candidates)
@@ -32,7 +30,7 @@ for idx, name in enumerate(candidates):
     for index in range(electionData_length):
         if electionData[index]["Candidate"] == name:
             voteTotals[idx] +=1
-    voteResults[idx] = {"Candidate": name, "VoteTototals" : voteTotals[idx]}
+    voteResults[idx] = {"Candidate": name, "VoteTotals" : voteTotals[idx], "PercentageVotes": round((voteTotals[idx]/electionData_length)*100, 2)}
 
 
 print(voteTotals)
