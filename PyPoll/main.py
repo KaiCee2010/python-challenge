@@ -27,6 +27,14 @@ for index in range(electionData_length):
     	voteCount_Khan += 1
     elif electionData[index]["Candidate"] == "Correy":
     	voteCount_Correy += 1
+    elif electionData[index]["Candidate"] == "Li":
+        voteCount_Li += 1
+    else:
+    	voteCount_Otooley += 1
+
 
 
 print(voteCount_Khan)
+print(voteCount_Correy)
+print(voteCount_Li)
+print(voteCount_Otooley)
