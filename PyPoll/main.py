@@ -31,3 +31,8 @@ with open(file_path, "r") as csvfile:
 electionData_length = len(electionData)
 print(electionData_length)
         
+for index in range(electionData_length):
+    if electionData[index]["Candidate"] == "Khan":
+    	voteCount_Khan += 1
+
+print(voteCount_Khan)
