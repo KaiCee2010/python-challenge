@@ -27,7 +27,7 @@ for name in candidates:
     voteResults.append({"Candidate": name, "VoteTotals" : voteTotals, "PercentageVotes": round((voteTotals/electionData_length) * 100, 3)})
     voteTotals = 0
 
-voteResults = sorted(voteResults, key = lambda i: i["PercentageVotes"])
+voteResults = sorted(voteResults, key = lambda i: i["VoteTotals"], reverse = True)
 
 for value in voteResults:
     print(f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})')
