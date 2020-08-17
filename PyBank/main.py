@@ -4,7 +4,6 @@ import csv
 file_path = os.path.join("", "Resources", "budget_data.csv")
 
 monthPL = []
-monthPL_sorted = []
 netPL = 0
 nextIndex = 1
 monthPL_length = 0
@@ -28,7 +27,7 @@ monthPL[0]["Difference"] = 0
 
 #loop through the list by index
 for index in range(monthPL_length):
-    #set add profit loss value to variable to create a running total
+    #add profit loss value to variable to create a running total
     netPL += (int(monthPL[index]["Profit/Losses"]))
     
     #check to make sure you are not at the end of the list
@@ -52,8 +51,8 @@ nextIndex -= 1
 #Calculate the average difference
 monthPL_diff_avg = round(monthPL_diff_total / nextIndex, 2)
 
-#sort the list and save it to a new variable
-monthPL_sorted = sorted(monthPL, key = lambda i: i["Difference"], reverse=True)
+#sort the list by profit/loss difference in descending order and save it
+monthPL = sorted(monthPL, key = lambda i: i["Difference"], reverse=True)
 
 #Print results to screen
 print("")
@@ -62,8 +61,8 @@ print("-----------------------------")
 print(f"Total Months: {monthPL_length}")
 print(f"Total: ${netPL}")
 print(f"Average Change: ${monthPL_diff_avg}")
-print(f"Greatest Increase in Profits: {monthPL_sorted[0]['Date']} (${monthPL_sorted[0]['Difference']})")
-print(f"Greatest Decrease in Profits: {monthPL_sorted[85]['Date']} (${monthPL_sorted[85]['Difference']})")
+print(f"Greatest Increase in Profits: {monthPL[0]['Date']} (${monthPL[0]['Difference']})")
+print(f"Greatest Decrease in Profits: {monthPL[nextIndex]['Date']} (${monthPL[nextIndex]['Difference']})")
 
 #write results to file
 output_path = os.path.join("","analysis", "results.txt")
@@ -73,8 +72,8 @@ with open(output_path, 'w') as txtfile:
     txtfile.write(f"Total Months: {monthPL_length}\n")
     txtfile.write(f"Total: ${netPL}\n")
     txtfile.write(f"Average Change: ${monthPL_diff_avg}\n")
-    txtfile.write(f"Greatest Increase in Profits: {monthPL_sorted[0]['Date']} (${monthPL_sorted[0]['Difference']})\n")
-    txtfile.write(f"Greatest Decrease in Profits: {monthPL_sorted[85]['Date']} (${monthPL_sorted[85]['Difference']})")
+    txtfile.write(f"Greatest Increase in Profits: {monthPL[0]['Date']} (${monthPL[0]['Difference']})\n")
+    txtfile.write(f"Greatest Decrease in Profits: {monthPL[nextIndex]['Date']} (${monthPL[nextIndex]['Difference']})")
 
 txtfile.close()
 
