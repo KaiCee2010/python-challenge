@@ -36,7 +36,6 @@ print("Election Results")
 print(dashes)
 print(f"Total Votes: {electionData_length}")
 print(dashes)
-
 for value in voteResults:
     print(f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})')
 print(dashes)
@@ -46,13 +45,14 @@ print(dashes)
 
 with open(outfile_path, 'w') as txtfile:
     txtfile.write("\n")
-    txtfile.write("Election Results")
-    txtfile.write(dashes)
-    txtfile.write(f"Total Votes: {electionData_length}")
-    txtfile.write(dashes)
-
+    txtfile.write("Election Results\n")
+    txtfile.write(f"{dashes}\n")
+    txtfile.write(f"Total Votes: {electionData_length}\n")
+    txtfile.write(f"{dashes}\n")
     for value in voteResults:
         txtfile.write(f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})')
-    txtfile.write(dashes)
-    txtfile.write(f'Winner: {voteResults[0]["Candidate"]}')
-    txtfile.write(dashes)
+        txtfile.write("\n")
+    txtfile.write(f"{dashes}\n")
+    txtfile.write(f'Winner: {voteResults[0]["Candidate"]}\n')
+    txtfile.write(f"{dashes}\n")
+txtfile.close()
