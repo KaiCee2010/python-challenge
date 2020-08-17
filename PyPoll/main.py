@@ -43,8 +43,16 @@ print(dashes)
 print(f'Winner: {voteResults[0]["Candidate"]}')
 print(dashes)
 
-# print(finalView)
 
-# finalTally = [f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})' for value in voteResults]
+with open(outfile_path, 'w') as txtfile:
+    txtfile.write("\n")
+    txtfile.write("Election Results")
+    txtfile.write(dashes)
+    txtfile.write(f"Total Votes: {electionData_length}")
+    txtfile.write(dashes)
 
-# print(*finalTally, sep = '\n')
+    for value in voteResults:
+        txtfile.write(f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})')
+    txtfile.write(dashes)
+    txtfile.write(f'Winner: {voteResults[0]["Candidate"]}')
+    txtfile.write(dashes)
