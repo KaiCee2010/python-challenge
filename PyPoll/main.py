@@ -4,7 +4,6 @@ import csv
 file_path = os.path.join("", "Resources", "election_data.csv")
 
 electionData = []
-electionData_length = 0
 voteResults = []
 candidates = []
 voteTotals = 0
@@ -20,15 +19,15 @@ with open(file_path, "r") as csvfile:
             candidates.append(row["Candidate"])
 	
 electionData_length = len(electionData)
-print(electionData_length)
-
 
 for name in candidates:
     for index in range(electionData_length):
         if electionData[index]["Candidate"] == name:
             voteTotals += 1
-    voteResults.append({"Candidate": name, "VoteTotals" : voteTotals, "PercentageVotes": round((voteTotals/electionData_length)*100, 3)})
+    voteResults.append({"Candidate": name, "VoteTotals" : voteTotals, "PercentageVotes": round((voteTotals/electionData_length) * 100, 3)})
     voteTotals = 0
 
-print(voteTotals)
-print(voteResults)
+voteResults = sorted(voteResults, key = lambda i: i["PercentageVotes"])
+
+for value in voteResults:
+    print(f'{value["Candidate"]}: {value["PercentageVotes"]}% ({value["VoteTotals"]})')
