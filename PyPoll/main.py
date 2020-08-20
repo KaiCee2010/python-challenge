@@ -1,8 +1,8 @@
 import os
 import csv
 
-infile_path = os.path.join("", "Resources", "election_data.csv")
-outfile_path = os.path.join("", "analysis", "results.txt")
+infile_path = os.path.join("Resources", "election_data.csv")
+outfile_path = os.path.join("analysis", "results.txt")
 
 electionData = []
 voteResults = []
