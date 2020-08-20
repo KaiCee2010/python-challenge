@@ -1,7 +1,8 @@
 import os
 import csv
 
-file_path = os.path.join("", "Resources", "budget_data.csv")
+file_path = os.path.join("Resources", "budget_data.csv")
+output_path = os.path.join("analysis", "results.txt")
 
 monthPL = []
 netPL = 0
@@ -65,7 +66,7 @@ print(f"Greatest Increase in Profits: {monthPL[0]['Date']} (${monthPL[0]['Differ
 print(f"Greatest Decrease in Profits: {monthPL[nextIndex]['Date']} (${monthPL[nextIndex]['Difference']})")
 
 #write results to file
-output_path = os.path.join("","analysis", "results.txt")
+
 with open(output_path, 'w') as txtfile:
     txtfile.write("\nFinancial Analysis\n")
     txtfile.write("-----------------------------\n\n")
