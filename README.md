@@ -1,22 +1,22 @@
 # python-challenge
 This project contains two folders:  PyBank and PyPoll.  Each folder contains the analysis and resources folders. Each folder also contains a main.py file.
 
-PyBank
+PyBank  
 The PyBank resources folder contains the budget_data.csv file.  Budget_data contains 86 records.  
 
-The main.py script performs the following code:
-*Reads data from the csv file into a reader
-*Adds data from the reader into a dictionary variable
-*Loops through the data to find a running total and  differences between months, then add the differnence to the existing dictionary
-*Sorts the list of dictionaries
-*Prints the following results to the screen and writes them to a file in the analysis folder:
-    total months
-    total
-    average change
-    greatest increase in profits
-    greatest decrease in profits
+The main.py script performs the following code:  
+*Reads data from the csv file into a reader  
+*Adds data from the reader into a dictionary variable  
+*Loops through the data to find a running total and  differences between months, then add the differnence to the existing dictionary  
+*Sorts the list of dictionaries  
+*Prints the following results to the screen and writes them to a file in the analysis folder:  
+    total months  
+    total  
+    average change  
+    greatest increase in profits  
+    greatest decrease in profits  
 
-PyPoll
+PyPoll  
 The PyPoll resources folder contains the election_data.csv file. Election_data.csv contains 3,521,001 records.
 
 The main.py file in the PyPoll folder performs the following code:
