@@ -5,27 +5,27 @@ PyBank
 The PyBank resources folder contains the budget_data.csv file.  Budget_data contains 86 records.  
 
 The main.py script performs the following code:  
-*Reads data from the csv file into a reader  
-*Adds data from the reader into a dictionary variable  
-*Loops through the data to find a running total and  differences between months, then add the differnence to the existing dictionary  
-*Sorts the list of dictionaries  
-*Prints the following results to the screen and writes them to a file in the analysis folder:  
-    total months  
-    total  
-    average change  
-    greatest increase in profits  
-    greatest decrease in profits  
+    *Reads data from the csv file into a reader  
+    *Adds data from the reader into a dictionary variable  
+    *Loops through the data to find a running total and  differences between months, then add the differnence to the existing dictionary  
+    *Sorts the list of dictionaries  
+    *Prints the following results to the screen and writes them to a file in the analysis folder:  
+        Total months  
+        Total  
+        Average Change  
+        Greatest Increase in Profits  
+        Greatest Decrease in Profits  
 
 PyPoll  
-The PyPoll resources folder contains the election_data.csv file. Election_data.csv contains 3,521,001 records.
+The PyPoll resources folder contains the election_data.csv file. Election_data.csv contains 3,521,001 records.  
 
-The main.py file in the PyPoll folder performs the following code:
-*Reads the file into a reader
-*Adds data from the reader into a list of dictionaries and also create a unique list of candidates
-*Grab the amounts of votes
-*Loop through the candidates names then loop through the election data to calculate votes. After calculating votes, add candidate name, vote totals and percentage of votes to a list of dictionaries.
-*Sort the list of vote results in descending order
-*Prints the following results to the screen and writes them to a file in the analysis folder:
-    total votes
-    candidates with their percentage of votes and vote totals
-    winner
+The main.py file in the PyPoll folder performs the following code:  
+    *Reads the file into a reader  
+    *Adds data from the reader into a list of dictionaries and also create a unique list of candidates  
+    *Grab the total amount of votes  
+    *Loop through the candidates names then loop through the election data to calculate votes. After calculating votes, add candidate name, vote totals and percentage of votes to a list of dictionaries.  
+    *Sort the list of vote results in descending order  
+    *Prints the following results to the screen and writes them to a file in the analysis folder:  
+        Total Votes  
+        Candidates with Their Percentage of Votes and Vote Totals  
+        Winner  
