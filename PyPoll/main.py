@@ -9,6 +9,7 @@ voteResults = []
 candidates = []
 voteTotals = 0
 
+print("Running report...")
 #Read data from csv file into a reader
 with open(infile_path, "r") as csvfile:
     csvreader = csv.DictReader(csvfile, delimiter = ",")

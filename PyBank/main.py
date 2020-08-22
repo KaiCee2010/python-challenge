@@ -12,6 +12,7 @@ monthPL_diff = 0
 monthPL_diff_total = 0
 monthPL_diff_avg = 0
 
+print("Running report...")
 #Read data from csv file into a reader
 with open(file_path, "r") as csvfile:
     csvreader = csv.DictReader(csvfile, delimiter = ",")
