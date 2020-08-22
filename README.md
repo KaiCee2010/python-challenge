@@ -10,11 +10,11 @@ The main.py script performs the following code:
     *Loops through the data to find a running total and  differences between months, then add the differnence to the existing dictionary  
     *Sorts the list of dictionaries  
     *Prints the following results to the screen and writes them to a file in the analysis folder:  
-        Total months  
-        Total  
-        Average Change  
-        Greatest Increase in Profits  
-        Greatest Decrease in Profits  
+        *Total months  
+        *Total  
+        *Average change  
+        *Greatest increase in profits  
+        *Greatest decrease in profits  
 
 PyPoll  
 The PyPoll resources folder contains the election_data.csv file. Election_data.csv contains 3,521,001 records.  
@@ -26,6 +26,6 @@ The main.py file in the PyPoll folder performs the following code:
     *Loop through the candidates names then loop through the election data to calculate votes. After calculating votes, add candidate name, vote totals and percentage of votes to a list of dictionaries.  
     *Sort the list of vote results in descending order  
     *Prints the following results to the screen and writes them to a file in the analysis folder:  
-        Total Votes  
-        Candidates with Their Percentage of Votes and Vote Totals  
-        Winner  
+        *Total votes  
+        *Each candidate with their percentage of votes and vote totals  
+        *Winner  
